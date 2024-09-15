@@ -8,6 +8,9 @@ version: "3.9"
 # - docker compose up;
 # - ds wp
 
+# http://skeleton.wp-test.com/
+# http://my-admin.wp-test.com
+
 networks:
   wp_skeleton:
     name: wp_skeleton
@@ -39,8 +42,6 @@ services:
     restart: unless-stopped
     networks:
       - wp_skeleton
-    #    ports:
-    #      - '3306:3306'
     volumes:
       - ./.build/database:/var/lib/mysql
     environment:
@@ -60,8 +61,6 @@ services:
     restart: unless-stopped
     networks:
       - wp_skeleton
-#    ports:
-#      - '8080:80'
     environment:
       WORDPRESS_DB_HOST: wp_mysql:3306
       WORDPRESS_DB_USER: wordpress
@@ -89,8 +88,6 @@ services:
       - wp_mysql
     networks:
       - wp_skeleton
-#    ports:
-#      - '8181:80'
     environment:
       MYSQL_USERNAME: wordpress
       MYSQL_ROOT_PASSWORD: wordpress
