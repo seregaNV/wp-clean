@@ -5,7 +5,7 @@ version: "3.9"
 #     sudo -- sh -c -e "echo '\n127.0.0.1 skeleton.wp-test.com' >> /etc/hosts";
 #     sudo -- sh -c -e "echo '\n127.0.0.1 my-admin.wp-test.com' >> /etc/hosts";
 
-#  docker compose up;
+# - docker compose up;
 # - ds wp
 
 networks:
